@@ -1,26 +1,33 @@
-@import url('components/camera/camera.css');
+@import url('colors.css');
 @import url('reset.css');
+@import url('components/camera/camera.css');
 
 .top {
     display: flex;
     justify-self: center;
-    gap: 1rem;
+    justify-content: space-around;
+    width: 70dvw;
+
+    padding: 1rem;
+    border-radius: 30px;
+    margin-top: 4rem;
+    box-shadow: 0px 0px 15px #000;
+    background: var(--background-secundair);
+    color: var(--text-secundair);
 
     .top-title {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
 
         h1 {
+            margin-top: 0.5rem;
             font-size: 4rem;
         }
 
         p {
-            font-size: 2rem;
+            margin-top: 1rem;
+            font-size: 1.5rem;
         }
-    }
-
-    #cameraphoto {
-        margin-top: 4rem;
     }
 }
