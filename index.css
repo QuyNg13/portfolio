@@ -1,1 +1,26 @@
-@import url('camera.css');
+@import url('components/camera/camera.css');
+@import url('reset.css');
+
+.top {
+    display: flex;
+    justify-self: center;
+    gap: 1rem;
+
+    .top-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    #cameraphoto {
+        margin-top: 4rem;
+    }
+}

@@ -1,4 +1,4 @@
-fetch('camera.html')
+fetch('components/camera/camera.html')
     .then(response => response.text())
     .then(html => {
         document.getElementById('cameraphoto').innerHTML += html;

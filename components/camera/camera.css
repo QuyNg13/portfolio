@@ -399,6 +399,10 @@
     clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
 }
 
+.polaroid-container {
+    height: calc(22.6em + 2em);
+}
+
 .tongue-gap {
     width: 316px;
     height: 5px;
@@ -421,6 +425,7 @@
 }
 
 .captured-polaroid {
+    position: relative;
     align-items: center;
     display: flex;
     border: #151515;
@@ -443,6 +448,7 @@
     opacity: 1;
     max-height: 500px;
     margin-top: 1em;
+    box-shadow: 5px 10px 10px #2d2d2d;
 }
 
 .captured-polaroid:not(.show) {
