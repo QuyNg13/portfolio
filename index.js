@@ -9,6 +9,33 @@ fetch('components/camera/camera.html')
         const capturedPhoto = document.querySelector('.captured-polaroid');
         const photo = document.getElementById('photo');
 
+        if (lens) {
+            lens.classList.remove('rotate');
+            void lens.offsetWidth;
+            lens.classList.add('rotate');
+        }
+
+        if (shutterSound) {
+            shutterSound.currentTime = 0;
+            shutterSound.play();
+        }
+
+        if (capturedPhoto) {
+            capturedPhoto.classList.remove('show');
+            void capturedPhoto.offsetWidth;
+            setTimeout(() => {
+                capturedPhoto.classList.add('show');
+            }, 800);
+        }
+
+        if (photo) {
+            photo.classList.remove('show');
+            void photo.offsetWidth;
+            setTimeout(() => {
+                photo.classList.add('show');
+            }, 800);
+        }
+
         if (captureButton) {
             captureButton.addEventListener('click', () => {
                 lens.classList.remove('rotate');
@@ -21,9 +48,10 @@ fetch('components/camera/camera.html')
                 if (capturedPhoto) {
                     capturedPhoto.classList.remove('show');
                     void capturedPhoto.offsetWidth;
+
                     setTimeout(() => {
                         capturedPhoto.classList.add('show');
-                    }, 800);
+                    }, 1000);
                 }
 
                 if (photo) {
@@ -31,7 +59,7 @@ fetch('components/camera/camera.html')
                     void photo.offsetWidth;
                     setTimeout(() => {
                         photo.classList.add('show');
-                    }, 800);
+                    }, 50);
                 }
             });
         }

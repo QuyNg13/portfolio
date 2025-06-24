@@ -436,7 +436,6 @@
     opacity: 0;
     margin-top: 0;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out, margin-top 1s ease-in-out;
-    /* z-index wordt nu alleen door .show geregeld */
 }
 
 .captured-polaroid.show {
@@ -453,7 +452,6 @@
     opacity: 0;
     max-height: 0;
     margin-top: 0;
-    /* z-index: -1; <-- deze NIET meer, anders zie je de animatie omhoog niet */
 }
 
 .captured-polaroid h2 {
