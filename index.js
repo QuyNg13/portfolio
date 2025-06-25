@@ -59,9 +59,22 @@ fetch('components/camera/camera.html')
                     void photo.offsetWidth;
                     setTimeout(() => {
                         photo.classList.add('show');
-                    }, 50);
+                    });
                 }
             });
         }
     })
     .catch(error => console.error('Fout bij het laden van camera:', error));
+
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.querySelector(".mask-text");
+  const text = el.textContent;
+  el.textContent = "";
+
+  text.split("").forEach((char, i) => {
+    const span = document.createElement("span");
+    span.textContent = char === " " ? "\u00A0" : char;
+    span.style.setProperty("--char-index", i);
+    el.appendChild(span);
+  });
+});
