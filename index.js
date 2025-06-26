@@ -69,12 +69,17 @@ fetch('components/camera/camera.html')
 document.addEventListener("DOMContentLoaded", () => {
   const el = document.querySelector(".mask-text");
   const text = el.textContent;
+  el.setAttribute("aria-label", text); 
+  el.setAttribute("role", "heading"); 
+  el.setAttribute("aria-level", "1"); 
+
   el.textContent = "";
 
   text.split("").forEach((char, i) => {
     const span = document.createElement("span");
     span.textContent = char === " " ? "\u00A0" : char;
     span.style.setProperty("--char-index", i);
+    span.setAttribute("aria-hidden", "true");
     el.appendChild(span);
   });
 });
