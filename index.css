@@ -2,26 +2,37 @@
 @import url('reset.css');
 @import url('components/camera/camera.css');
 
+main {
+    section {
+        padding: 2rem, 0, 2rem, 0;
+
+        h2 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
 .mask-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  line-height: 1.2;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
 .mask-text span {
-  display: inline-block;
-  transform: translateY(120%);
-  opacity: 0;
-  animation: maskSlideUp 0.6s ease forwards;
-  animation-delay: calc(var(--char-index) * 0.06s);
+    display: inline-block;
+    transform: translateY(120%);
+    opacity: 0;
+    animation: maskSlideUp 0.6s ease forwards;
+    animation-delay: calc(var(--char-index) * 0.06s);
 }
 
 @keyframes maskSlideUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
@@ -98,15 +109,8 @@
 }
 
 .projects {
-    margin-top: 4rem;
-    padding: 2rem;
     background: var(--background);
     color: var(--text);
-
-    h2 {
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
-        margin-bottom: 1.5rem;
-    }
 
     .project-grid {
         display: grid;
