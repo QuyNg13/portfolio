@@ -1,0 +1,31 @@
+<div class="card">
+  <button
+    class="project-card"
+    popovertarget="project-{{ project.id }}-popover"
+  >
+    <img
+      src="{{ project.image }}"
+      alt="Screenshot van {{ project.title }}"
+    />
+
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.short_description }}</p>
+    <span class="project-year">{{ project.year }}</span>
+  </button>
+
+  <div
+    id="project-{{ project.id }}-popover"
+    popover
+    class="project-popover"
+  >
+    <h4>{{ project.title }}</h4>
+    <p>{{ project.long_description }}</p>
+
+    <button
+      popovertarget="project-{{ project.id }}-popover"
+      popovertargetaction="hide"
+    >
+      Sluiten
+    </button>
+  </div>
+</div>

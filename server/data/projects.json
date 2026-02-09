@@ -1,0 +1,22 @@
+{
+    "id": "Projects",
+    "title": "Projects",
+    "content": [
+        {
+            "id": "wafs",
+            "title": "WAFS",
+            "image": "/images/wafs.webp",
+            "short_description": "Web app for flight scheduling.",
+            "long_description": "Een uitgebreide webapplicatie voor het plannen en beheren van vluchten. Gebouwd met focus op performance en UX.",
+            "year": 2024
+        },
+        {
+            "id": "portfolio",
+            "title": "Portfolio Website",
+            "image": "/images/portfolio.webp",
+            "short_description": "Mijn persoonlijke portfolio.",
+            "long_description": "Een custom portfolio website gebouwd met Liquid components en Node.js.",
+            "year": 2023
+        }
+    ]
+}
