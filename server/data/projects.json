@@ -13,7 +13,7 @@
         {
             "id": "portfolio",
             "title": "Portfolio Website",
-            "image": "/images/portfolio.webp",
+            "image": "/images/bt.webp",
             "short_description": "Mijn persoonlijke portfolio.",
             "long_description": "Een custom portfolio website gebouwd met Liquid components en Node.js.",
             "year": 2023

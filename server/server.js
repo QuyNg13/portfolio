@@ -21,10 +21,10 @@ const readJson = (file) =>
   JSON.parse(fs.readFileSync(path.resolve('server', 'data', file), 'utf-8'));
 
 app.get('/', async (req, res) => {
-  const project = readJson('projects.json');
+  const projectData = readJson('projects.json');
   return res.send(renderTemplate('server/views/index.liquid', {
     title: 'Home',
-    projects: project
+    projects: projectData.content
   }));
 });
 
