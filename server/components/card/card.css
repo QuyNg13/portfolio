@@ -22,20 +22,17 @@
 
 .project-card h3 {
   font-size: var(--font-size-md);
-  margin: 1rem 1rem 0.5rem;
   color: var(--text-color);
 }
 
 .project-card p {
   color: var(--text-light);
-  margin: 0 1rem 1rem;
   line-height: var(--line-height);
 }
 
 .project-year {
   color: var(--secondary-color);
   font-size: 0.875rem;
-  margin: 0 1rem 1rem;
 }
 
 .project-popover {

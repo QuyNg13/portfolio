@@ -3,20 +3,12 @@
 }
 
 .top-title {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
-  max-width: var(--max-width);
-  margin: 0 auto;
+
 }
 
 .top-title h1 {
   font-size: clamp(2rem, 5vw, var(--font-size-xl));
   margin: 0 0 var(--spacing-md) 0;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .top-title h2 {
@@ -39,12 +31,12 @@
 }
 
 .projects {
-  padding: var(--spacing-xl) 0;
+
 }
 
 .project-grid, .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0.3fr));
   gap: var(--spacing-md);
   max-width: var(--max-width);
   margin: var(--spacing-lg) auto 0;
@@ -53,8 +45,7 @@
 }
 
 .about {
-  padding: var(--spacing-xl) 0;
-  text-align: center;
+
 }
 
 .about h2 {
@@ -64,7 +55,6 @@
 
 .about p {
   max-width: 800px;
-  margin: 0 auto;
   font-size: var(--font-size-base);
   color: var(--text-light);
   line-height: 1.8;
