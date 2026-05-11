@@ -5,42 +5,55 @@
 {% endblock %}
 
 {% block content %}
-<section class="top">
-  <div class="top-title">
-    <div>
-      <h1 class="mask-text">Quy Nguyen</h1>
-      <p>Front-End developer based in the Netherlands</p>
-    </div>
-    <div>
-      <h2>Contact me!</h2>
-      <p>quy@quynguyen.nl</p>
-    </div>
-    <div>
-      <ul>
-        <li>
-          <a href="https://github.com/QuyNg13">GitHub</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/ngoc-quy-nguyen/">LinkedIn</a>
-        </li>
-      </ul>
+<section class="top" aria-label="Intro">
+  <div class="container top-title">
+    <header class="hero">
+      <div class="hero-brand">
+        <p class="hero-eyebrow">Front-End Developer</p>
+        <h1 class="mask-text">Quy Nguyen</h1>
+        <p class="hero-subtitle">Based in the Netherlands · building interactive, user-friendly websites</p>
+      </div>
+
+      <nav class="hero-nav" aria-label="Primary">
+        <ul class="hero-links">
+          <li>
+            <a class="link" href="https://github.com/QuyNg13" target="_blank" rel="noreferrer noopener">GitHub</a>
+          </li>
+          <li>
+            <a class="link" href="https://www.linkedin.com/in/ngoc-quy-nguyen/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          </li>
+        </ul>
+
+        <a class="btn btn-primary" href="#projects">View projects</a>
+      </nav>
+    </header>
+
+    <div class="hero-contact" aria-label="Contact">
+      <h2>Contact</h2>
+      <p>
+        <a class="link" href="mailto:quy@quynguyen.nl">quy@quynguyen.nl</a>
+      </p>
     </div>
   </div>
 </section>
 
-<section class="projects">
-  <h2>Projects</h2>
-  <ul class="project-grid">
-    {% for project in projects %}
-    <li>
-      {% render "server/components/card/card.liquid", project: project %}
-    </li>
-    {% endfor %}
-  </ul>
+<section id="projects" class="projects" aria-label="Projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <ul class="project-grid">
+      {% for project in projects %}
+      <li>
+        {% render "server/components/card/card.liquid", project: project %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </section>
 
-<section class="about">
-  <h2>About me</h2>
-  <p>Front-end developer passionate about building interactive, user-friendly websites.</p>
+<section class="about" aria-label="About">
+  <div class="container">
+    <h2 class="section-title">About me</h2>
+    <p class="lead">Front-end developer passionate about building interactive, user-friendly websites.</p>
+  </div>
 </section>
 {% endblock %}
