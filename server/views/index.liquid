@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<section class="top" aria-label="Intro">
-  <div class="container top-title">
+<section class="site-hero" aria-label="Intro">
+  <div class="container hero-layout">
     <header class="hero">
       <div class="hero-brand">
         <p class="hero-eyebrow">Front-End Developer</p>
-        <h1 class="mask-text">Quy Nguyen</h1>
+        <h1>Quy Nguyen</h1>
         <p class="hero-subtitle">Based in the Netherlands · building interactive, user-friendly websites</p>
       </div>
 
@@ -28,17 +28,17 @@
       </nav>
     </header>
 
-    <div class="hero-contact" aria-label="Contact">
+    <aside class="hero-contact" aria-label="Contact">
       <h2>Contact</h2>
       <p>
         <a class="link" href="mailto:quy@quynguyen.nl">quy@quynguyen.nl</a>
       </p>
-    </div>
+    </aside>
   </div>
 </section>
 
 <section id="projects" class="projects" aria-label="Projects">
-  <div class="container">
+  <div class="container section-heading">
     <h2 class="section-title">Projects</h2>
     <ul class="project-grid">
       {% for project in projects %}
@@ -51,7 +51,7 @@
 </section>
 
 <section class="about" aria-label="About">
-  <div class="container">
+  <div class="container section-heading">
     <h2 class="section-title">About me</h2>
     <p class="lead">Front-end developer passionate about building interactive, user-friendly websites.</p>
   </div>

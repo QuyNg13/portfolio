@@ -1,4 +1,4 @@
-<div class="card">
+<article class="project-card-wrapper">
   <button
     class="project-card"
     popovertarget="project-{{ project.id }}-popover"
@@ -8,9 +8,12 @@
       alt="Screenshot van {{ project.title }}"
     />
 
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.short_description }}</p>
-    <span class="project-year">{{ project.year }}</span>
+    <span class="project-card-content">
+      <span class="project-card-meta">{{ project.year }}</span>
+      <span class="project-card-title">{{ project.title }}</span>
+      <span class="project-card-summary">{{ project.short_description }}</span>
+      <span class="project-card-action">Read project <span aria-hidden="true">↗</span></span>
+    </span>
   </button>
 
   <div
@@ -18,14 +21,12 @@
     popover
     class="project-popover"
   >
+    <div class="project-popover-header">
+      <p class="project-popover-label">Project · {{ project.year }}</p>
+      <button class="popover-close" popovertarget="project-{{ project.id }}-popover" popovertargetaction="hide" aria-label="Close {{ project.title }} details">×</button>
+    </div>
     <h4>{{ project.title }}</h4>
     <p>{{ project.long_description }}</p>
 
-    <button
-      popovertarget="project-{{ project.id }}-popover"
-      popovertargetaction="hide"
-    >
-      Sluiten
-    </button>
   </div>
-</div>
+</article>
