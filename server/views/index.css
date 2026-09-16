@@ -11,6 +11,16 @@
 
 .hero {
     display: contents;
+
+    & h1 {
+        max-width: 10ch;
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(4rem, 10vw, 8.5rem);
+        font-weight: 400;
+        letter-spacing: -0.065em;
+        line-height: 0.95;
+    }
 }
 
 .hero-brand {
@@ -25,16 +35,6 @@
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-}
-
-.hero h1 {
-    max-width: 10ch;
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: clamp(4rem, 10vw, 8.5rem);
-    font-weight: 400;
-    letter-spacing: -0.065em;
-    line-height: 0.95;
 }
 
 .hero-subtitle {
@@ -54,31 +54,46 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 3rem;
-}
 
-.hero-actions {
-    display: flex;
-    gap: 1.25rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+    & .hero-portrait {
+        flex: 0 0 10rem;
+        width: 10rem;
+        height: 10rem;
+        overflow: hidden;
+        background: var(--color-surface);
+        border: 0.1875rem solid var(--color-surface);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0.0625rem var(--color-accent-line), 0 0.75rem 1.75rem color-mix(in oklab, var(--color-ink) 14%, transparent);
 
-.hero-actions {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+        & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 1.25rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 }
 
 .btn-secondary {
     color: var(--color-ink);
     background: transparent;
     border-color: var(--color-ink);
-}
 
-.btn-secondary:hover {
-    color: var(--color-surface);
-    background: var(--color-ink);
-    transform: translateY(-0.125rem);
+    &:hover {
+        color: var(--color-surface);
+        background: var(--color-ink);
+        transform: translateY(-0.125rem);
+    }
 }
 
 .hero-contact {
@@ -89,31 +104,31 @@
     gap: 1.5rem;
     padding-top: 1.5rem;
     border-top: 0.0625rem solid var(--color-line);
-}
 
-.hero-contact h2,
-.hero-contact-links {
-    margin: 0;
-}
+    & h2,
+    & .hero-contact-links {
+        margin: 0;
+    }
 
-.hero-contact h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1;
-}
+    & h2 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        line-height: 1;
+    }
 
-.hero-contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 0.5rem 1.25rem;
-    list-style: none;
-}
+    & .hero-contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.5rem 1.25rem;
+        list-style: none;
 
-.hero-contact-links a {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
+        & a {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+    }
 }
 
 .projects,
@@ -190,15 +205,15 @@
     margin-top: 1rem;
     padding-top: 1.5rem;
     border-top: 0.0625rem solid rgba(255, 254, 251, 0.2);
-}
 
-.tech-stack h3 {
-    margin: 0 0 1rem;
-    color: #d4d7ce;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    & h3 {
+        margin: 0 0 1rem;
+        color: #d4d7ce;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
 }
 
 .tech-list {
@@ -231,12 +246,12 @@
     place-items: center;
     background: rgba(255, 254, 251, 0.08);
     border-radius: 0.65rem;
-}
 
-.tech-logo img {
-    width: 1.4rem;
-    height: 1.4rem;
-    object-fit: contain;
+    & img {
+        width: 1.4rem;
+        height: 1.4rem;
+        object-fit: contain;
+    }
 }
 
 @media (max-width: 48rem) {
@@ -254,24 +269,23 @@
     .hero-nav {
         align-items: flex-start;
         gap: 1.75rem;
-    }
 
-    .hero-actions {
-        justify-content: flex-start;
+        & .hero-actions {
+            justify-content: flex-start;
+        }
     }
 
     .hero-contact {
         align-items: flex-start;
         flex-direction: column;
         gap: 0.5rem;
+
+        & .hero-contact-links {
+            justify-content: flex-start;
+        }
     }
 }
 
-@media (max-width: 48rem) {
-    .hero-contact-links {
-        justify-content: flex-start;
-    }
-}
 @media (max-width: 38rem) {
     .project-grid {
         grid-template-columns: 1fr;
