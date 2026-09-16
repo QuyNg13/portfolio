@@ -140,3 +140,10 @@ a {
     animation-iteration-count: 1 !important;
   }
 }
+.hero h1,
+.section-title,
+.about-heading,
+.project-card-title,
+.project-popover h3 {
+  text-wrap: balance;
+}

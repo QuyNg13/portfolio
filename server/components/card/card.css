@@ -1,5 +1,7 @@
 .project-card-wrapper {
     height: 100%;
+    container-name: project-card;
+    container-type: inline-size;
 }
 
 .project-card {
@@ -164,16 +166,17 @@
     background: var(--color-ink);
 }
 
-@media (max-width: 31rem) {
+@container project-card (max-width: 31rem) {
     .project-card-open {
         flex-direction: column;
         height: auto;
     }
 
     .project-card img {
-        flex: 0 0 12rem;
+        flex: 0 0 auto;
         width: calc(100% - 1.5rem);
-        height: 12rem;
+        height: auto;
+        aspect-ratio: 16 / 9;
         margin: 0.75rem 0.75rem 0;
         min-height: 0;
     }
