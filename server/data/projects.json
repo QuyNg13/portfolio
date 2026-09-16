@@ -1,22 +1,74 @@
 {
-    "id": "Projects",
-    "title": "Projects",
-    "content": [
-        {
-            "id": "wafs",
-            "title": "WAFS",
-            "image": "/images/wafs.webp",
-            "short_description": "Web app for flight scheduling.",
-            "long_description": "Een uitgebreide webapplicatie voor het plannen en beheren van vluchten. Gebouwd met focus op performance en UX.",
-            "year": 2024
-        },
-        {
-            "id": "portfolio",
-            "title": "Portfolio Website",
-            "image": "/images/bt.webp",
-            "short_description": "Mijn persoonlijke portfolio.",
-            "long_description": "Een custom portfolio website gebouwd met Liquid components en Node.js.",
-            "year": 2023
-        }
-    ]
+  "id": "Projects",
+  "title": "Projects",
+  "content": [
+    {
+      "id": "framez",
+      "title": "Framer Framed",
+      "image": "/images/blank.png",
+      "short_description": "A server-rendered archive website built with Node.js, LiquidJS, and TinyHTTP.",
+      "long_description": "A flexible, component-based web application for the Framer Framed archive, with reusable Liquid templates, a lightweight Node.js back end, and interactive front-end search.",
+      "year": 2025,
+      "repository_url": "https://github.com/Liamvanbart1/Framez"
+    },
+    {
+      "id": "hcd",
+      "title": "HCD",
+      "image": "/images/hcd.webp",
+      "short_description": "An accessible keyboard concept designed around a real user’s needs.",
+      "long_description": "A human-centred design project exploring a more accurate, less tiring mobile typing experience for a stylus user with limited comfort while travelling.",
+      "year": 2025,
+      "repository_url": "https://github.com/QuyNg13/HCD",
+      "live_url": "https://quyng13.github.io/HCD/"
+    },
+    {
+      "id": "api-2425",
+      "title": "API 2425",
+      "image": "/images/api.webp",
+      "short_description": "A server-rendered web app built with TinyHTTP, Liquid, and Vite.",
+      "long_description": "A Node.js web application with a Vite-powered front end and a TinyHTTP and LiquidJS back end, deployed as a live API project.",
+      "year": 2025,
+      "repository_url": "https://github.com/QuyNg13/API-2425",
+      "live_url": "https://api-2425.onrender.com"
+    },
+    {
+      "id": "browser-tech",
+      "title": "Browser Tech",
+      "image": "/images/bt.webp",
+      "short_description": "A progressive web-form project focused on accessible HTML.",
+      "long_description": "A browser technology project exploring well-structured, accessible forms and progressively enhanced web experiences.",
+      "year": 2025,
+      "repository_url": "https://github.com/QuyNg13/browser-tech",
+      "live_url": "https://quyng13.github.io/browser-tech/"
+    },
+    {
+      "id": "css-for-the-rescue",
+      "title": "CSS for the Rescue",
+      "image": "/images/css.webp",
+      "short_description": "An interactive control-panel interface built with CSS.",
+      "long_description": "A CSS-focused project that develops a playful, expandable control panel with custom properties and a range of interactive controls.",
+      "year": 2025,
+      "repository_url": "https://github.com/QuyNg13/CSS-for-the-rescue",
+      "live_url": "https://quyng13.github.io/CSS-for-the-rescue/"
+    },
+    {
+      "id": "wafs",
+      "title": "WAFS",
+      "image": "/images/wafs.webp",
+      "short_description": "A web application for flight scheduling.",
+      "long_description": "A web application for planning and managing flights, designed with an emphasis on performance and user experience.",
+      "year": 2025,
+      "repository_url": "https://github.com/QuyNg13/WAFS",
+      "live_url": "https://quyng13.github.io/WAFS/"
+    },
+    {
+      "id": "project-tech-team-5",
+      "title": "Game Mate Finder",
+      "image": "/images/blank.png",
+      "short_description": "A platform that helps gamers find people to play with.",
+      "long_description": "A full-stack web application for connecting gamers by their interests, favourite genres, and preferred consoles. It includes accounts, profiles, game information, and friend requests.",
+      "year": 2024,
+      "repository_url": "https://github.com/QuyNg13/project-tech-team-5"
+    }
+  ]
 }

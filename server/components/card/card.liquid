@@ -1,8 +1,5 @@
 <article class="project-card-wrapper">
-  <button
-    class="project-card"
-    popovertarget="project-{{ project.id }}-popover"
-  >
+  <div class="project-card">
     <img
       src="{{ project.image }}"
       alt="Screenshot van {{ project.title }}"
@@ -12,9 +9,14 @@
       <span class="project-card-meta">{{ project.year }}</span>
       <span class="project-card-title">{{ project.title }}</span>
       <span class="project-card-summary">{{ project.short_description }}</span>
-      <span class="project-card-action">Read project <span aria-hidden="true">↗</span></span>
+      <span class="project-card-links">
+        <button class="project-card-action" popovertarget="project-{{ project.id }}-popover">Read project <span aria-hidden="true">↗</span></button>
+        {% if project.live_url %}
+        <a class="project-card-action" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit site <span aria-hidden="true">↗</span></a>
+        {% endif %}
+      </span>
     </span>
-  </button>
+  </div>
 
   <div
     id="project-{{ project.id }}-popover"
@@ -27,6 +29,11 @@
     </div>
     <h4>{{ project.title }}</h4>
     <p>{{ project.long_description }}</p>
-
+    <p class="project-popover-links">
+      <a class="link" href="{{ project.repository_url }}" target="_blank" rel="noreferrer noopener">View source <span aria-hidden="true">↗</span></a>
+      {% if project.live_url %}
+      <a class="link" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit live site <span aria-hidden="true">↗</span></a>
+      {% endif %}
+    </p>
   </div>
 </article>
