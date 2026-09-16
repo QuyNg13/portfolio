@@ -1,5 +1,5 @@
 .site-hero {
-    padding-block: clamp(3rem, 8vw, 7.5rem);
+    padding-block: clamp(3rem, 1vw, 7.5rem);
     background: radial-gradient(circle at 88% 12%, rgba(203, 75, 44, 0.16), transparent 22rem), linear-gradient(120deg, #ebe7dc 0%, var(--color-canvas) 64%);
 }
 

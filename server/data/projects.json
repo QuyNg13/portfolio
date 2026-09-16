@@ -12,6 +12,14 @@
       "repository_url": "https://github.com/Liamvanbart1/Framez"
     },
     {
+      "id": "apphive",
+      "title": "AppHive",
+      "image": "/images/apphive-prototype.svg",
+      "short_description": "A public-values app marketplace shaped through research, concepts, and prototyping.",
+      "long_description": "As project leader, Quy led the project and built the clickable prototype. He conducted user research and helped develop the App Packages and Public Stack Scan concepts for a more transparent, privacy-conscious app marketplace.",
+      "year": 2025
+    },
+    {
       "id": "hcd",
       "title": "HCD",
       "image": "/images/hcd.webp",

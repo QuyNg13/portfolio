@@ -23,9 +23,19 @@
 }
 
 .project-card img {
+    flex: 0 0 min(46%, 16rem);
     width: min(46%, 16rem);
-    min-height: 14rem;
+    height: 14rem;
+    margin: 0.75rem 0 0.75rem 0.75rem;
+    min-height: 0;
+    padding: 0.35rem;
+    background: #e8e3d8;
+    border: 0.0625rem solid var(--color-line);
+    border-radius: calc(var(--radius-md) - 0.25rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(38, 37, 31, 0.08);
+    filter: saturate(0.82) contrast(0.97);
     object-fit: cover;
+    object-position: top;
 }
 
 .project-card-content {
@@ -156,8 +166,9 @@
     }
 
     .project-card img {
-        width: 100%;
+        width: calc(100% - 1.5rem);
         height: 12rem;
+        margin: 0.75rem 0.75rem 0;
         min-height: 0;
     }
 }
