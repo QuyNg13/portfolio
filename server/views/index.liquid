@@ -24,7 +24,10 @@
           </li>
         </ul>
 
-        <a class="btn btn-primary" href="#projects">View projects</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="#about">About me</a>
+        </div>
       </nav>
     </header>
 
@@ -50,10 +53,30 @@
   </div>
 </section>
 
-<section class="about" aria-label="About">
-  <div class="container section-heading">
-    <h2 class="section-title">About me</h2>
-    <p class="lead">Front-end developer passionate about building interactive, user-friendly websites.</p>
+<section id="about" class="about" aria-label="About Quy">
+  <div class="container about-layout">
+    <div class="about-intro">
+      <h2 class="section-title">About me</h2>
+      <p class="about-heading">Designing useful web experiences from research to release.</p>
+    </div>
+
+    <div class="about-content">
+      <p class="lead">Quy is a front-end developer who also works across server-rendered and full-stack web applications.</p>
+      <p class="about-copy">His documented work includes an accessible mobile keyboard shaped through user testing, an NS travel-information application using geolocation and APIs, and a gaming platform with accounts, profiles, and friend requests. He also contributes to projects built around reusable components, thoughtful interaction, and clear interfaces.</p>
+
+      <div class="tech-stack">
+        <h3>Core technologies</h3>
+        <ul class="tech-list" aria-label="Technologies used by Quy">
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/html5.svg" alt="" /></span><span>HTML</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/css3.svg" alt="" /></span><span>CSS</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/javascript.svg" alt="" /></span><span>JavaScript</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/nodejs.svg" alt="" /></span><span>Node.js</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/express.svg" alt="" /></span><span>Express</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/mongodb.svg" alt="" /></span><span>MongoDB</span></li>
+          <li class="tech-item"><span class="tech-logo"><img src="/images/tech/vite.svg" alt="" /></span><span>Vite</span></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

@@ -54,12 +54,30 @@
     gap: 3rem;
 }
 
-.hero-links {
+.hero-links,
+.hero-actions {
     display: flex;
     gap: 1.25rem;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.hero-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.btn-secondary {
+    color: var(--color-ink);
+    background: transparent;
+    border-color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+    color: var(--color-surface);
+    background: var(--color-ink);
+    transform: translateY(-0.125rem);
 }
 
 .hero-contact {
@@ -119,6 +137,28 @@
     list-style: none;
 }
 
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(2.5rem, 8vw, 8rem);
+}
+
+.about-heading {
+    max-width: 15ch;
+    margin: 1.5rem 0 0;
+    color: #f1a28c;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+}
+
+.about-content {
+    display: grid;
+    gap: 1.75rem;
+    align-content: start;
+}
+
 .lead {
     max-width: 40rem;
     margin: 0;
@@ -127,8 +167,69 @@
     line-height: 1.45;
 }
 
+.about-copy {
+    max-width: 43rem;
+    margin: 0;
+    color: #b9beb1;
+    line-height: 1.7;
+}
+
+.tech-stack {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid rgba(255, 254, 251, 0.2);
+}
+
+.tech-stack h3 {
+    margin: 0 0 1rem;
+    color: #d4d7ce;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-item {
+    display: grid;
+    justify-items: center;
+    gap: 0.55rem;
+    min-height: 6.5rem;
+    padding: 1rem 0.5rem;
+    color: #d4d7ce;
+    border: 0.0625rem solid rgba(255, 254, 251, 0.15);
+    border-radius: 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.tech-logo {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    background: rgba(255, 254, 251, 0.08);
+    border-radius: 0.65rem;
+}
+
+.tech-logo img {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+}
+
 @media (max-width: 48rem) {
-    .hero-layout {
+    .hero-layout,
+    .about-layout {
         grid-template-columns: 1fr;
     }
 
@@ -141,6 +242,10 @@
     .hero-nav {
         align-items: flex-start;
         gap: 1.75rem;
+    }
+
+    .hero-actions {
+        justify-content: flex-start;
     }
 
     .hero-contact {

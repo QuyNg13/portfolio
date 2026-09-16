@@ -2,38 +2,48 @@
   <div class="project-card">
     <img
       src="{{ project.image }}"
-      alt="Screenshot van {{ project.title }}"
+      alt="Preview of {{ project.title }}"
     />
 
-    <span class="project-card-content">
-      <span class="project-card-meta">{{ project.year }}</span>
-      <span class="project-card-title">{{ project.title }}</span>
-      <span class="project-card-summary">{{ project.short_description }}</span>
-      <span class="project-card-links">
-        <button class="project-card-action" popovertarget="project-{{ project.id }}-popover">Read project <span aria-hidden="true">↗</span></button>
+    <div class="project-card-content">
+      <p class="project-card-meta">{{ project.year }}</p>
+      <h3 class="project-card-title">{{ project.title }}</h3>
+      <p class="project-card-summary">{{ project.short_description }}</p>
+      <div class="project-card-links">
+        <button
+          class="project-card-action"
+          type="button"
+          data-dialog-open="project-{{ project.id }}-dialog"
+          aria-haspopup="dialog"
+          aria-controls="project-{{ project.id }}-dialog"
+        >Read project <span aria-hidden="true">↗</span></button>
         {% if project.live_url %}
-        <a class="project-card-action" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit site <span aria-hidden="true">↗</span></a>
+        <a class="project-card-action" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit site <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
         {% endif %}
-      </span>
-    </span>
+      </div>
+    </div>
   </div>
 
-  <div
-    id="project-{{ project.id }}-popover"
-    popover
+  <dialog
+    id="project-{{ project.id }}-dialog"
     class="project-popover"
+    aria-labelledby="project-{{ project.id }}-title"
   >
     <div class="project-popover-header">
       <p class="project-popover-label">Project · {{ project.year }}</p>
-      <button class="popover-close" popovertarget="project-{{ project.id }}-popover" popovertargetaction="hide" aria-label="Close {{ project.title }} details">×</button>
+      <button class="popover-close" type="button" data-dialog-close aria-label="Close {{ project.title }} details" autofocus>×</button>
     </div>
-    <h4>{{ project.title }}</h4>
+    <h3 id="project-{{ project.id }}-title">{{ project.title }}</h3>
     <p>{{ project.long_description }}</p>
+    {% if project.repository_url or project.live_url %}
     <p class="project-popover-links">
-      <a class="link" href="{{ project.repository_url }}" target="_blank" rel="noreferrer noopener">View source <span aria-hidden="true">↗</span></a>
+      {% if project.repository_url %}
+      <a class="link" href="{{ project.repository_url }}" target="_blank" rel="noreferrer noopener">View source <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+      {% endif %}
       {% if project.live_url %}
-      <a class="link" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit live site <span aria-hidden="true">↗</span></a>
+      <a class="link" href="{{ project.live_url }}" target="_blank" rel="noreferrer noopener">Visit live site <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
       {% endif %}
     </p>
-  </div>
+    {% endif %}
+  </dialog>
 </article>
