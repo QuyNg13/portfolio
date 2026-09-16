@@ -1,6 +1,6 @@
 .site-hero {
     padding-block: clamp(3rem, 1vw, 7.5rem);
-    background: radial-gradient(circle at 88% 12%, rgba(203, 75, 44, 0.16), transparent 22rem), linear-gradient(120deg, #ebe7dc 0%, var(--color-canvas) 64%);
+    background: radial-gradient(circle at 88% 12%, var(--color-accent-glow), transparent 22rem), linear-gradient(120deg, var(--color-accent-wash) 0%, var(--color-canvas) 64%);
 }
 
 .hero-layout {
@@ -47,14 +47,15 @@
 
 .hero-nav {
     grid-column: 2;
+    align-self: end;
+    justify-self: end;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 3rem;
 }
 
-.hero-links,
 .hero-actions {
     display: flex;
     gap: 1.25rem;
@@ -91,17 +92,28 @@
 }
 
 .hero-contact h2,
-.hero-contact p {
+.hero-contact-links {
     margin: 0;
 }
 
 .hero-contact h2 {
-    font-size: 0.875rem;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1;
 }
 
-.hero-contact p {
-    font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+.hero-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+}
+
+.hero-contact-links a {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
 
 .projects,
@@ -255,6 +267,11 @@
     }
 }
 
+@media (max-width: 48rem) {
+    .hero-contact-links {
+        justify-content: flex-start;
+    }
+}
 @media (max-width: 38rem) {
     .project-grid {
         grid-template-columns: 1fr;

@@ -1,6 +1,5 @@
 /* Global stylesheet entry point */
 @import 'reset.css';
-@import 'typography.css';
 @import '../server/layouts/base.css';
 @import '../server/views/index.css';
 @import '../server/components/card/card.css';
